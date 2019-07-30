@@ -72,4 +72,10 @@ public class TrackController {
         }
         return responseEntity;
     }
+    @GetMapping("toptrack")
+    public ResponseEntity<?> getTopTrack()
+    {
+        trackService.getTopTracks();
+        return new ResponseEntity<String>("Fetched",HttpStatus.OK);
+    }
 }

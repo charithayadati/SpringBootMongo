@@ -13,5 +13,8 @@ public interface TrackService {
 
    public Track getTrackById(int id);
 
+
     public boolean UpdateTrack(Track track);
+
+    public void getTopTracks();
 }
