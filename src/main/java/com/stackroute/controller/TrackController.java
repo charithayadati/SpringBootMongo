@@ -19,7 +19,7 @@ public class TrackController {
         this.trackService = trackService;
     }
 
-
+//maps the savetrack request
    @PostMapping("saveTrack")
     public ResponseEntity<?> saveTrack(@RequestBody Track track)
     {
@@ -36,7 +36,7 @@ public class TrackController {
         return responseEntity;
     }
 
-
+//maps the request to fetch the data
     @GetMapping("/Tracks")
 
     public ResponseEntity<?> getTracks  () throws Exception {

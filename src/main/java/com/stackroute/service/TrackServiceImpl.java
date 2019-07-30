@@ -34,14 +34,14 @@ public class TrackServiceImpl implements TrackService{
     public TrackServiceImpl() {
 
     }
-
+//saves the new track
     @Override
     public boolean saveTrack(Track track) {
         Track saveduser=trackRepository.save(track);
         return  true;
 
     }
-
+//deletes the track
     @Override
     public boolean deleteTrack(int id) {
         if(trackRepository.existsById(id))
@@ -55,16 +55,17 @@ public class TrackServiceImpl implements TrackService{
             return false;
         }
     }
+    //returns track by id
     @Override
     public Track getTrackById(int id) {
         return getTrackById(id);
     }
-
+//updates the track
     @Override
     public boolean UpdateTrack(Track track) {
         return true;
     }
-
+//fetches all the tracks
     @Override
     public String getAllTracks ()throws IOException {
         URL obj = new URL(GET_URL);
